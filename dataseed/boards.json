@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Catatan Pribadi",
+        "cover_img": "https://cultivatedculture.com/wp-content/uploads/2019/05/Chromatic-LinkedIn-Cover-Photo-Background.png",
+        "description": "Aku adalah kamu."
+    },
+    {
+        "name": "Kesibukan Duniawi",
+        "cover_img": "https://cultivatedculture.com/wp-content/uploads/2019/05/LinkedIn-cover-photo-example-nyc-skyline.png",
+        "description": "Kerja kerja kerja"
+    },
+    {
+        "name": "Belajar Menulis",
+        "cover_img": "https://cultivatedculture.com/wp-content/uploads/2019/05/LinkedIn-Cover-Photo-Example-Meet-Me-For-Coffee.png",
+        "description": "Membuat hujan memang kelihatan mustahil, tapi sebenarnya sangat mungkin diupayakan"
+    },
+    {
+        "name": "Ilmu Pengetahuan",
+        "cover_img": "https://cultivatedculture.com/wp-content/uploads/2019/05/Chromatic-LinkedIn-Cover-Photo-Background.png",
+        "description": "DIY: cara bikin roket dengan peralatan rumah."
+    }
+
+]

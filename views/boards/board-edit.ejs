@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Board</h1>
+    <form action="/boards/add" method="POST">
+        <label for="name">Title</label>
+        <input type="text" id="name" name="name" value="<%= board.name %>"><br>
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description" value="<%= board.description %>"><br>
+        <label for="cover_img">URL Image for cover photo:</label>
+        <input type="text" id="cover_img" name="cover_img" value="<%= board.cover_img %>">
+
+        <br>
+
+        <button type="submit">Update</button>
+
+    </form>
+    
+</body>
+</html>
