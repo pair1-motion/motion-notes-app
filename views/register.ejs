@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Join</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <div>
+        <form action="/users/register" method="post">
+            <label for="">Username :   </label>
+            <input type="text" name="uname"><br>
+            <label for="">Email :   </label>
+            <input type="text" name="email"><br>
+            <label for="">Pasword :</label>
+            <input type="password" name="pw"><br>
+            <label for="">Ulangi Pasword :</label>
+            <input type="password" name="pwCheck"><br>
+            <button type="submit">Daftar</button>
+        </form>
+    </div>
+    <%- include('./partials/members') %> 
+</body>
+</html>

@@ -4,39 +4,51 @@
 ## Development - nb:
         Tambahkan Catatan disini:
 - [x] Init DB
-- [ ] Init Table
+- [x] Init Table
 - [x] Skeleton Code Express router dan controller
-- [ ] Relasi m:n (Many to Many) Table Users:Boards
-    - [ ] Database
-    - [ ] Model
-- [ ] Relasi n:1 (One to Many) Table Boards:Notes
-    - [ ] Database
-    - [ ] Model
+- [x] Relasi m:n (Many to Many) Table Users:Boards
+    - [x] Database
+    - [x] Model
+- [x] Relasi n:1 (One to Many) Table Boards:Notes
+    - [x] Database
+    - [x] Model
 - [ ] CRUD
     - [ ] User      -> Bagus
+      - [x] Register (add)
+      - [x] Login (read)
     - [ ] Board     -> Hakim
     - [ ] Note
 - [ ] EJS
-    - [ ] Home
-    - [ ] Dasboard (user id -> session)
+    - [x] Home
+    - [x] Dasboard (user id -> session)
     - [ ] Board
     - [ ] Notes
 - [ ] Router Get
-    - [ ] Home (login/register)
-    - [ ] Dasboard
-    - [ ] Add Board
-    - [ ] User Page (list all connected Boards)
+    - [x] Home (login/register)
+    - [ ] Users
+      - [x] Register / main page
+      - [x] login
+      - [x] Dashboard
+    - [ ] Board
+      - [ ] Add Board
+    - [ ] Note
+      - [ ] Edit Notes (or 1st edit / add)
+    <!-- - [ ] User Page (list all connected Boards)
       - [ ] Board (list all connected notes)
-        - [ ] Notes (edit the notes)
+        - [ ] Notes (edit the notes) -->
 - [ ] Router Post
-    - [ ] Login / Register (login/register)
-    - [ ] Add Board
-    - [ ] Modify / Edit Board
+    - [ ] Users
+      - [x] Login
+      - [x] Register
+    - [ ] Board
+      - [ ] Add Board
+      - [ ] Modify / Edit Board
+    - [ ] Note
       - [ ] Add Notes
       - [ ] Edit Notes (edit the notes)
 - [ ] Method
     - [ ] Static Method (   ?)
-    - [ ] Instance Method (  ?) Hooks (   ?)
+    - [ ] Instance Method (  ?) Hooks (  afterFind -> Pw: null ?)
 - [ ] Helper (   ?)
 - [ ] Middleware (    ?)
 - [ ] Session Register / Login

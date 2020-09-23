@@ -4,8 +4,11 @@ class Controller {
     // halaman depan app
     static homeC (req, res) {
         // ganti code dibawah
-        res.send ('☺ Hello People...')
+        res.render ('index')
     }
 }
 
-module.exports = Controller
+module.exports = { 
+    Controller,
+    UserController: require('./user')
+}
