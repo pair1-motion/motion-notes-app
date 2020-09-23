@@ -1,1 +1,43 @@
 # motion-notes-app
+---
+
+## Development - nb:
+        Tambahkan Catatan disini:
+- [x] Init DB
+- [ ] Init Table
+- [x] Skeleton Code Express router dan controller
+- [ ] Relasi m:n (Many to Many) Table Users:Boards
+    - [ ] Database
+    - [ ] Model
+- [ ] Relasi n:1 (One to Many) Table Boards:Notes
+    - [ ] Database
+    - [ ] Model
+- [ ] CRUD
+    - [ ] User      -> Bagus
+    - [ ] Board     -> Hakim
+    - [ ] Note
+- [ ] EJS
+    - [ ] Home
+    - [ ] Dasboard (user id -> session)
+    - [ ] Board
+    - [ ] Notes
+- [ ] Router Get
+    - [ ] Home (login/register)
+    - [ ] Dasboard
+    - [ ] Add Board
+    - [ ] User Page (list all connected Boards)
+      - [ ] Board (list all connected notes)
+        - [ ] Notes (edit the notes)
+- [ ] Router Post
+    - [ ] Login / Register (login/register)
+    - [ ] Add Board
+    - [ ] Modify / Edit Board
+      - [ ] Add Notes
+      - [ ] Edit Notes (edit the notes)
+- [ ] Method
+    - [ ] Static Method (   ?)
+    - [ ] Instance Method (  ?) Hooks (   ?)
+- [ ] Helper (   ?)
+- [ ] Middleware (    ?)
+- [ ] Session Register / Login
+- [ ] MVP google translate

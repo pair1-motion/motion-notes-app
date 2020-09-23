@@ -1,0 +1,23 @@
+{
+  "name": "motion-notes-app",
+  "version": "1.0.0",
+  "description": "notes-apps",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "keywords": [],
+  "author": "motion-team",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "pg": "^8.3.3",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "sequelize-cli": "^6.2.0"
+  }
+}
