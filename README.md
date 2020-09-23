@@ -13,15 +13,15 @@
     - [x] Database
     - [x] Model
 - [ ] CRUD
-    - [ ] User      -> Bagus
+    - [x] User      -> Bagus
       - [x] Register (add)
       - [x] Login (read)
-    - [ ] Board     -> Hakim
+    - [x] Board     -> Hakim
     - [ ] Note
 - [ ] EJS
     - [x] Home
     - [x] Dasboard (user id -> session)
-    - [ ] Board
+    - [x] Board
     - [ ] Notes
 - [ ] Router Get
     - [x] Home (login/register)
@@ -29,20 +29,20 @@
       - [x] Register / main page
       - [x] login
       - [x] Dashboard
-    - [ ] Board
-      - [ ] Add Board
+    - [x] Board
+      - [x] Add Board
     - [ ] Note
       - [ ] Edit Notes (or 1st edit / add)
     <!-- - [ ] User Page (list all connected Boards)
       - [ ] Board (list all connected notes)
         - [ ] Notes (edit the notes) -->
 - [ ] Router Post
-    - [ ] Users
+    - [x] Users
       - [x] Login
       - [x] Register
-    - [ ] Board
-      - [ ] Add Board
-      - [ ] Modify / Edit Board
+    - [x] Board
+      - [x] Add Board
+      - [x] Modify / Edit Board
     - [ ] Note
       - [ ] Add Notes
       - [ ] Edit Notes (edit the notes)
