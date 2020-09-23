@@ -95,7 +95,7 @@ class UserController {
 
     static deleteUserC (req, res) {
         // res.send ('msuk')
-        User.delete({
+        User.destroy({
             where: {
                 uname: req.params.uname
             }
