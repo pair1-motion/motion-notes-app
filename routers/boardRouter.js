@@ -6,6 +6,10 @@ router.get('/add', BoardController.addBoardForm)
 
 router.post('/add', BoardController.addBoard)
 
+router.get('/addToRelation/:id', BoardController.addUserBoardC)
+
+router.post('/addAuthor/:idBoard', BoardController.addAuthorC)
+
 router.get('/:boardId', BoardController.boardViewById)
 
 router.get('/:boardId/edit', BoardController.editBoardForm)

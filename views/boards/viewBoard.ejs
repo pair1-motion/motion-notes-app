@@ -10,12 +10,17 @@
 
     <h1><%= board.name %></h1>
     <p><%= board.description %></p>
-    <h3>Contributor:</h3>
+    <h3>Author:</h3>
     <ul>
-        <li>rainmaker</li>
-        <li>suncatcher</li>
-        <li>kiterunner</li>
+        <% users.forEach (e => { %>
+            <li><%= e.uname %> </li>
+        <% }) %> 
     </ul>
+    <form action="/boards/addAuthor/<%= board.id %>" method="post">
+        <label for="input">Masukkan Kode User :</label>
+        <input type="text" name="UserId">
+        <button type="submit">Add</button>
+    </form>
     
     Notes:
 </body>

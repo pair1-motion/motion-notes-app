@@ -57,6 +57,7 @@ class UserController {
                         if (check === true) {
                             req.session.isLoggedIn = true
                             req.session.username = result.uname
+                            req.session.idUser = result.id
                             // res.redirect (`/users/${result.uname}`)
                             res.redirect (`/`)
                         } else {

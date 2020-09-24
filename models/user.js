@@ -11,7 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.belongsToMany(models.Board, { through: models.UserBoard })
+      User.belongsToMany(models.Board, { 
+        through: models.UserBoard
+        // foreignKey: "UserId",
+        // as: 'User'
+      })
     }
   };
   User.init({
@@ -19,11 +23,11 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     pw: DataTypes.STRING
   }, {
-    hooks: {
-      beforeCreate: {
+    // hooks: {
+    //   beforeCreate: {
         
-      }
-    },
+    //   }
+    // },
     sequelize,
     modelName: 'User',
   });
