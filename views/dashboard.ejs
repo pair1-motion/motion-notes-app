@@ -26,15 +26,17 @@
             <div>
                 <div class="card-columns" style="margin: 0 auto; margin: 10px;">
                     <% boards.forEach((e, i) => { %>
-                        <div class="card text-center">
+                        <div class="card">
                             <% if (e.cover_img) { %>
                                 <img src="<%= e.cover_img %> " class="card-img-top"></img>
                             <% } %> 
                             <div class="card-body">
-                                <a class="card-title card-link" href="/boards/<%= e.id %>"><h3><%= e.name %></h3></a>
-                                <div class="card-text"><%= e.description %> </div>
+                                <a class="card-title" href="/boards/<%= e.id %>"><h3><%= e.name %></h3></a>
+                                <p class="card-text"><%= e.description %> </p>
+                                <a class="card-link" href="/boards/<%= e.id %>/edit">Edit</a>
+                                <a class="card-link" href="/boards/<%= e.id %>/delete">Delete</a>
                             </div>
-                        </div><br>
+                        </div>
                     <% }) %>
                 </div>
             </div>

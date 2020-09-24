@@ -106,7 +106,7 @@ class BoardController {
             }
         })
         .then(data => {
-            res.redirect('/boards')
+            res.redirect('/')
         })
         .catch(err => {
             res.send(err)
@@ -124,7 +124,7 @@ class BoardController {
         })
         .then(data => {
             // res.send(data)
-            res.redirect('/boards')
+            res.redirect('/')
         })
         .catch(err => {
             res.send(err)
