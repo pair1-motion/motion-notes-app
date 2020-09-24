@@ -33,7 +33,14 @@ router.post('/:boardId/notes/add', BoardController.addNote)
 
 
 // /boards/1/1
-router.get('/:boardId/:noteId', BoardController.viewNote)
+router.get('/:boardId/:noteId', (req, res) => {
+    if (!req.query.lang) {
+        BoardController.viewNote(req, res)
+    } else {
+        BoardController.viewNoteInLang(req, res)
+    }
+})
+// router.get('/:boardId/:noteId?', BoardController.viewNote)
 
 router.get('/:boardId/:noteId/delete', BoardController.deleteNote)
 
