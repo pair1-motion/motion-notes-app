@@ -15,12 +15,12 @@
         <% boards.forEach(e => { %>
             <div style="background-color: aqua; width: 100px; height: 100px;">
                 <div>
-                    <a href="/users/b/<%= e.id %>"><%= e.name %></a>
+                    <a href="/boards/<%= e.id %>"><%= e.name %></a>
                 </div>
                 <div><%= e.description %> </div>
             </div>
         <% }) %>
     </div>
-    <div><a href="b/add">Add Board</a></div>
+    <div><a href="boards/add">Add Board</a></div>
 </body>
 </html>

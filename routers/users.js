@@ -25,7 +25,6 @@ router.post ('/register', UserController.registerUserC)
 router.post ('/update/:uname', UserController.updateUserC)
 
 // ! Board
-router.use('/b', require('./boardRouter'))
 
 
 module.exports = router
