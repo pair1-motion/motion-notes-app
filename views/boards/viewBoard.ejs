@@ -24,7 +24,7 @@
     
     <h2>Notes:</h2>
     <% for(let i = 0; i < notes.length; i++) { %>
-        <p><%= notes[i].note %></p>
+        <h3><%= notes[i].note %></h3>
         <button><a href="/boards/<%=board.id%>/<%=notes[i].id%>">View note</a></button>
     <% } %>
 
