@@ -18,11 +18,6 @@ router.post('/:boardId/edit', BoardController.editBoard)
 
 router.get('/:boardId/delete', BoardController.deleteBoard)
 
-// ! Notes
-
-
-
-
 //====================== Handled by noteRouter ========================
 
 // /boards/:boardId
@@ -47,11 +42,6 @@ router.get('/:boardId/:noteId/delete', BoardController.deleteNote)
 router.get('/:boardId/:noteId/edit', BoardController.editNoteForm)
 
 router.post('/:boardId/:noteId/edit', BoardController.editNote)
-
-
-
-
-
 
 
 module.exports = router

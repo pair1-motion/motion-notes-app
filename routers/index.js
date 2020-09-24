@@ -13,4 +13,9 @@ router.use ('/users', require('./users'))
 // boardRouter
 router.use('/boards', boardRouter)
 
+// handle error
+router.get('*', (req, res) => {
+    res.render ('Page Not Found')
+})
+
 module.exports = router
