@@ -23,11 +23,14 @@ class UserController {
         })
     }
 
-    static loginFormC (req, res) {
-        
+    static loginFormC (req, res, err) {
         User.findAll ()
             .then((data) => {
-                res.render ('login', {dataMember:data})
+                if (err) {
+                    res.render ('login', {dataMember:data, err})
+                } else {
+                    res.render ('login', {dataMember:data})
+                }
             }).catch((err) => {
                 res.send("error :" + err)
             })
@@ -37,14 +40,24 @@ class UserController {
         // res.send ()
         User.findOne ({
             where: {
-                uname: req.body.uname
+                uname: req.body.uname,
+                pw: req.body.pw
             }
         }).then((result) => {
             // res.send(result)
-            res.redirect (`/users/dashboard/${result.uname}`)
+            // console.log (result)
+            if (result == null) {
+                res.redirect (`login?err=true`)
+            } else {
+                res.redirect (`/users/${result.uname}`)
+            }
         }).catch((err) => {
             res.send('error :' + err)
         })
+    }
+
+    static logoutC (req, res) {
+        res.redirect ('/')
     }
 
     static dashboardC (req, res) {
@@ -87,7 +100,7 @@ class UserController {
             }
         }).then((result) => {
             // res.send(result)
-            res.redirect(`/users/dashboard/${req.body.uname}`)
+            res.redirect(`/users/${req.body.uname}`)
         }).catch((err) => {
             res.send("error :" +     err)
         })

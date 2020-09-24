@@ -9,15 +9,18 @@
     
     <h1>Welcome <%= uname %> </h1>
     <a href="/users/setting/<%= uname %>">Setting</a>
+    <a href="/users/logout">Logout</a>
     <h2>Here is your Board</h2>
     <div>
         <% boards.forEach(e => { %>
             <div style="background-color: aqua; width: 100px; height: 100px;">
-                <div><%= e.name %> </div>
+                <div>
+                    <a href="/users/b/<%= e.id %>"><%= e.name %></a>
+                </div>
                 <div><%= e.description %> </div>
             </div>
         <% }) %>
     </div>
-    <div><a href="#">Add Board</a></div>
+    <div><a href="b/add">Add Board</a></div>
 </body>
 </html>

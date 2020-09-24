@@ -10,5 +10,6 @@ class Controller {
 
 module.exports = { 
     Controller,
-    UserController: require('./user')
+    UserController: require('./user'),
+    BoardController: require('./board')
 }

@@ -1,18 +1,30 @@
 const router = require('express').Router()
-const { UserController } = require('../controllers')
+const { UserController, BoardController, Controller } = require('../controllers')
 
-
+// ini halaman register langsung 
 router.get ('/', UserController.showAllUsersC)
-router.get ('/login', UserController.loginFormC)
+// ini login dengan kondisi query
+router.get ('/login', (req, res) => {
+    if (!req.query.err) {
+        UserController.loginFormC(req, res, err=false)
+    } else {
+        UserController.loginFormC(req, res, err=true)
+    }
+})
 
-
-router.get ('/dashboard/:uname', UserController.dashboardC)
+// homenya user ini setelah login
+router.get ('/:uname', UserController.dashboardC)
 
 router.get ('/setting/:uname', UserController.settingC)
 router.get ('/delete/:uname', UserController.deleteUserC)
+router.get ('/logout', UserController.logoutC)
 
 router.post ('/login', UserController.loginPostC)
 router.post ('/register', UserController.registerUserC)
 router.post ('/update/:uname', UserController.updateUserC)
+
+// ! Board
+router.use('/b', require('./boardRouter'))
+
 
 module.exports = router
