@@ -19,6 +19,11 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     pw: DataTypes.STRING
   }, {
+    hooks: {
+      beforeCreate: {
+        
+      }
+    },
     sequelize,
     modelName: 'User',
   });

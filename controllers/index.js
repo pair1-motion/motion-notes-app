@@ -4,7 +4,7 @@ class Controller {
     // halaman depan app
     static homeC (req, res) {
         // ganti code dibawah
-        console.log (req.session.isLoggedIn, req.session.username)
+        // console.log (req.session.isLoggedIn, req.session.username)
         if (req.session.isLoggedIn) {
             User.findOne ({
                 where: {

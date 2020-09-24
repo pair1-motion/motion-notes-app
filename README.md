@@ -48,8 +48,9 @@
       - [ ] Edit Notes (edit the notes)
 - [ ] Method
     - [ ] Static Method (   ?)
-    - [ ] Instance Method (  ?) Hooks (  afterFind -> Pw: null ?)
+    - [ ] Instance Method (  ?)
+- [ ] Hooks (  afterFind -> Pw: null ?)
 - [ ] Helper (   ?)
 - [ ] Middleware (    ?)
-- [ ] Session Register / Login
+- [x] Session Register / Login
 - [ ] MVP google translate

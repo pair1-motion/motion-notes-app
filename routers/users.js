@@ -18,7 +18,7 @@ router.get ('/:uname', UserController.dashboardC)
 
 router.get ('/setting/:uname', UserController.settingC)
 router.get ('/delete/:uname', UserController.deleteUserC)
-router.get ('/logout', UserController.logoutC)
+// router.get ('/logout', UserController.logoutC) // diganti ke router utama
 
 router.post ('/login', UserController.loginPostC)
 router.post ('/register', UserController.registerUserC)

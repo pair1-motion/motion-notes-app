@@ -71,12 +71,13 @@ class UserController {
         })
     }
 
-    static logoutC (req, res) {
-        req.session.destroy(err => {
-            if (err) res.send(err)
-            res.redirect ('/')
-        })
-    }
+    // ! diganti ke router utama
+    // static logoutC (req, res) {
+    //     req.session.destroy(err => {
+    //         if (err) res.send(err)
+    //         res.redirect ('/')
+    //     })
+    // }
 
     static dashboardC (req, res) {
         User.findOne ({
