@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit note</title>
+</head>
+<body>
+    <h1>Edit note</h1>
+    <form action="/boards/<%=note.BoardId%>/<%=note.id%>/edit" method="POST">
+        <textarea rows="10" cols="50" name="note"><%=note.note%></textarea><br>
+
+        <label for="cover_img">URL Image for cover:</label><br>
+        <input type="text" id="cover_img" name="cover_img" value="<%=note.cover_img%>"><br>
+
+        <button type="submit">Post</button>
+        <button type="button"><a href="/boards/<%=note.BoardId%>">Cancel</a></button>
+    </form>
+</body>
+</html>

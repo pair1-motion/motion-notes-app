@@ -17,6 +17,14 @@
         <li>kiterunner</li>
     </ul>
     
-    Notes:
+    <h2>Notes:</h2>
+    <% for(let i = 0; i < notes.length; i++) { %>
+        <p><%= notes[i].note %></p>
+        <button><a href="/boards/<%=board.id%>/<%=notes[i].id%>">View note</a></button>
+    <% } %>
+
+
+    <br>
+    <button><a href="/boards/<%=board.id%>/notes/add">Add a new note</a></button>
 </body>
 </html>
