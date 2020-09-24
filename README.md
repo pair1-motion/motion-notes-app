@@ -17,7 +17,7 @@
       - [x] Register (add)
       - [x] Login (read)
     - [x] Board     -> Hakim
-    - [ ] Note
+    - [x] Note
 - [x] EJS
     - [x] Home
     - [x] Dasboard (user id -> session)
@@ -50,9 +50,9 @@
 
 - [ ] Method
     - [ ] Static Method (   ?)
-    - [ ] Instance Method (  ?)
+    - [x] Instance Method (  ?)
 - [x] Hooks (  pw hashing )
-- [ ] Helper (  paragraf view note di board )
+- [x] Helper (  paragraf view note di board )
 - [ ] Middleware (    ?)
 - [x] Session Register / Login
 - [ ] MVP google translate
