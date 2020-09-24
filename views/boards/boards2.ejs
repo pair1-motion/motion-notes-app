@@ -12,21 +12,27 @@
   </head>
   <body>
     <div class="container">
-        <img src="<%= note.cover_img %>" alt="note-cover" class="img-fluid" alt="Responsive image">
-
-        <h1>Note:</h1>
-
-        <blockquote class="blockquote">
-            <p class="mb-0"><%=note.note%></p>
-            <footer class="blockquote-footer"><i><b>Written at:</b> <%=prop.created%> <b>Lastly modified at:</b> <%=prop.updated%></i></footer>
-
-        </blockquote>
-        <p><i><%=prop.stat%></i></p>
-
-        <a href="/boards/<%=note.BoardId%>/<%=note.id%>/edit" class="btn btn-primary" role="button" aria-pressed="true">Edit</a>
-
-
+    <h1>Home</h1>
+    <h3>Contributor:</h3>
+    <ul>
+        
+    </ul>
     
+    <% boards.forEach(element => { %>
+    <div class="card" style="width: 18rem;">
+        <img src=<%= element.cover_img %> class="card-img-top" alt="board-cover">
+        <div class="card-body">
+          <h5 class="card-title"><%= element.name %></h5>
+          <p class="card-text"><%= element.description %></p>
+          <a href="/boards/<%= element.id %>" class="btn btn-primary">View Board</a>
+          <a href="/boards/<%= element.id %>/edit" class="btn btn-primary">Edit</a>
+          <a href="/boards/<%= element.id %>/delete" class="btn btn-primary">Delete/a>
+
+        </div>
+    </div>
+    <% }) %>
+    <button type="button" class="btn btn-primary btn-lg btn-block"><a href="/boards/add">Create another Board</a><</button>
+
     
     </div>
 
