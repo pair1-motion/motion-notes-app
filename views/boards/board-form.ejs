@@ -12,7 +12,9 @@
   </head>
   <body>
     <div class="container">
-    <h1>Create a new Board</h1>
+      <div class="jumbotron">
+        <h1>Create a new Board</h1>
+      </div>
     <form action="/boards/add" method="POST">
         <div class="form-group">
             <label for="name">Title:</label>
@@ -28,6 +30,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Create</button>
+        <a href="/" class="btn btn-danger">Cancel</a>
     </form>
     </div>
 

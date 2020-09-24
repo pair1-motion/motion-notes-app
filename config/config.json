@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "postgres",
-    "password": "999999999",
+    "password": "postgres",
     "database": "pair-notes-app",
     "host": "127.0.0.1",
     "dialect": "postgres"
