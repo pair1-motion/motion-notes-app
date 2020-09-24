@@ -13,6 +13,11 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Note.belongsTo(models.Board)
     }
+
+    getCreatedDate () {
+      let tanggal = (this.dataValues.createdAt).toISOString().split("T")
+      return `Tanggal: ${tanggal[0]} at ${tanggal[1]}`
+    }
   };
   Note.init({
     note: DataTypes.STRING,

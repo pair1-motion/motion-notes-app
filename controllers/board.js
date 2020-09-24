@@ -161,7 +161,8 @@ class BoardController {
             })
             .then(data => {
                 // res.send(data)
-                res.render('./notes/viewNote', { note: data })
+                // data.getCreatedDate()
+                res.render('./notes/viewNote', { note: data, date:data.getCreatedDate() })
             })
             .catch(err => {
                 res.send(err)

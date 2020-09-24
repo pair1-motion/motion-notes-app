@@ -51,7 +51,7 @@
 - [ ] Method
     - [ ] Static Method (   ?)
     - [ ] Instance Method (  ?)
-- [ ] Hooks (  pw hashing )
+- [x] Hooks (  pw hashing )
 - [ ] Helper (  paragraf view note di board )
 - [ ] Middleware (    ?)
 - [x] Session Register / Login
