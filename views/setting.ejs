@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Setting</title>
+    <%- include ('./css.ejs') %>
 </head>
 <body>
-    <h1>Perbarui Data</h1>
-    <div>
-        <form action="/users/update/<%= data.uname %> " method="post">
-            <label for="">Username :   </label>
-            <input type="text" name="uname" value="<%= data.uname %>"><br>
-            <label for="">Email :</label>
-            <input type="email" name="pw" value="<%= data.email %>"><br><br>
-            <button type="submit">Perbarui Data</button>
-        </form>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Perbarui Data</h1>
+        </div>
+        <div>
+            <form action="/users/update/<%= data.uname %> " method="post">
+                <div class="form-group">
+                    <label for="">Username :   </label>
+                    <input class="form-control" type="text" name="uname" value="<%= data.uname %>"><br>
+                </div>
+                <div class="form-group">
+                    <label for="">Email :</label>
+                    <input class="form-control" type="email" name="pw" value="<%= data.email %>"><br>
+                </div>
+                <button class="btn btn-primary" type="submit">Perbarui Data</button>
+            </form>
+        </div>
+        <br>
+        <br>
+        <a class="btn btn-danger" href="/users/delete/<%= data.uname %>">Hapus Akun</a>
+        <a class="btn btn-success" href="/">Cancel</a>
     </div>
-    <a href="/users/delete/<%= data.uname %>">Hapus Akun</a>
 </body>
 </html>

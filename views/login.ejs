@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Back</title>
+    
+    <%- include ('./css.ejs') %>
+    <%- include ('./css/login.ejs') %>
 </head>
 <body>
-    <h1>Login</h1>
-    <div>
-        <form action="/users/login" method="post">
-            <label for="">Username :   </label>
-            <input type="text" name="uname"><br>
-            <label for="">Pasword :</label>
-            <input type="password" name="pw"><br>
-            <button type="submit">Login</button>
-        </form>
-        <%= err ? "Data tidak ditemukan, masukkan Data dengan benar!" : '' %> 
+    <div class="container">
+        <%- include ('./partials/nav.ejs') %>
+        <div class="jumbotron">
+            <h1>Login</h1>
+        </div>
+        <div class="container">
+            <form action="/users/login" method="post">
+                <div class="form-group">
+                    <label for="">Username :</label>
+                    <input type="text" class="form-control" name="uname"><br>
+                </div>
+                <div class="form-froup">
+                    <label for="">Pasword :</label>
+                    <input type="password" class="form-control" name="pw"><br>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <%= err ? "Data tidak ditemukan, masukkan Data dengan benar!" : '' %> 
+        </div>
+        <br><br><br>
+
+        <div class="jumbotron">
+            <%- include('./partials/members') %>
+        </div>
     </div>
-    <%- include('./partials/members') %>
 </body>
 </html>

@@ -4,22 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let's Join</title>
+    <%- include ('./css.ejs') %>
 </head>
 <body>
-    <h1>Register</h1>
-    <div>
-        <form action="/users/register" method="post">
-            <label for="">Username :   </label>
-            <input type="text" name="uname"><br>
-            <label for="">Email :   </label>
-            <input type="text" name="email"><br>
-            <label for="">Pasword :</label>
-            <input type="password" name="pw"><br>
-            <label for="">Ulangi Pasword :</label>
-            <input type="password" name="pwCheck"><br>
-            <button type="submit">Daftar</button>
-        </form>
+    <div class="container">
+        <%- include ('./partials/nav') %> 
+        <div class="jumbotron">
+            <h1>Register</h1>
+        </div>
+        <div class="container">
+            <form action="/users/register" method="post">
+                <div class="form-group">
+                    <label for="">Username :   </label>
+                    <input type="text" name="uname" class="form-control" ><br>
+                </div>
+                <div class="form-group">
+                    <label for="">Email :   </label>
+                    <input type="text" name="email" class="form-control" ><br>
+                </div>
+                <div class="form-group">
+                    <label for="">Pasword :</label>
+                    <input type="password" name="pw" class="form-control" ><br>
+                </div>
+                <div class="form-group">
+                    <label for="">Ulangi Pasword :</label>
+                    <input type="password" name="pwCheck" class="form-control" ><br>
+                </div>
+                <button class="btn btn-primary" type="submit">Daftar</button>
+            </form>
+        </div>
+
+        <br><br>
+        <div class="jumbotron">
+            <%- include('./partials/members') %>
+        </div>
     </div>
-    <%- include('./partials/members') %> 
 </body>
 </html>

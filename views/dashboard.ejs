@@ -4,23 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome <%= uname %> </title>
+    <%- include ('./css.ejs') %>
 </head>
 <body>
-    
-    <h1>Welcome <%= uname %> </h1>
-    <a href="/users/setting/<%= uname %>">Setting</a>
-    <a href="/logout">Logout</a>
-    <h2>Here is your Board</h2>
-    <div>
-        <% boards.forEach(e => { %>
-            <div style="background-color: aqua; width: 100px; height: 100px;">
-                <div>
-                    <a href="/boards/<%= e.id %>"><%= e.name %></a>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Welcome <%= uname %> </h1><br>
+            <a href="/users/setting/<%= uname %>" class="btn btn-primary">Setting</a>
+            <a href="/logout" class="btn btn-primary">Logout</a>
+        </div>
+        <div class="jumbotron">
+            <div class="conainer">
+                <div class="row">
+                    <h2>Here is your Board</h2>
                 </div>
-                <div><%= e.description %> </div>
+                <div class="row">
+                    <a href="boards/add" class="btn btn-primary">Add Board</a>
+                </div>
             </div>
-        <% }) %>
+            <br>
+            <div>
+                <div class="card-columns" style="margin: 0 auto; margin: 10px;">
+                    <% boards.forEach((e, i) => { %>
+                        <div class="card">
+                            <% if (e.cover_img) { %>
+                                <img src="<%= e.cover_img %> " class="card-img-top"></img>
+                            <% } %> 
+                            <div class="card-body">
+                                <a class="card-title" href="/boards/<%= e.id %>"><h3><%= e.name %></h3></a>
+                                <p class="card-text"><%= e.description %> </p>
+                                <a class="card-link" href="/boards/<%= e.id %>/edit">Edit</a>
+                                <a class="card-link" href="/boards/<%= e.id %>/delete">Delete</a>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
     </div>
-    <div><a href="boards/add">Add Board</a></div>
 </body>
 </html>
