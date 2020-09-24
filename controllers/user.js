@@ -49,7 +49,10 @@ class UserController {
             if (result == null) {
                 res.redirect (`login?err=true`)
             } else {
-                res.redirect (`/users/${result.uname}`)
+                req.session.isLoggedIn = true
+                req.session.username = result.uname
+                // res.redirect (`/users/${result.uname}`)
+                res.redirect (`/`)
             }
         }).catch((err) => {
             res.send('error :' + err)
@@ -57,7 +60,10 @@ class UserController {
     }
 
     static logoutC (req, res) {
-        res.redirect ('/')
+        req.session.destroy(err => {
+            if (err) res.send(err)
+            res.redirect ('/')
+        })
     }
 
     static dashboardC (req, res) {

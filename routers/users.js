@@ -1,10 +1,11 @@
 const router = require('express').Router()
 const { UserController, BoardController, Controller } = require('../controllers')
 
-// ini halaman register langsung 
+// ini halaman register langsung
 router.get ('/', UserController.showAllUsersC)
 // ini login dengan kondisi query
 router.get ('/login', (req, res) => {
+    // ! Penggunaan session 
     if (!req.query.err) {
         UserController.loginFormC(req, res, err=false)
     } else {

@@ -4,6 +4,7 @@ const boardRouter = require('./boardRouter')
 
 // arahkan router
 router.get('/', Controller.homeC)
+router.get('/logout', Controller.logOutC)
 
 router.use ('/users', require('./users'))
 
