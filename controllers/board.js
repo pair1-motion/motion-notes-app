@@ -1,4 +1,6 @@
 const { Board, UserBoard, User, Note} = require("../models/index")
+const Helper = require("../helpers/helper")
+
 
 class BoardController {
     // /boards
@@ -22,6 +24,11 @@ class BoardController {
         .then(data => {
             // dataBoard = data
             // res.send (data)
+            let notes = data.Notes
+            notes.forEach(Element => {
+                Element.note = Helper.getNoteTitle(Element.note)
+            })
+            // res.send(notes)
             res.render('./boards/viewBoard', {board:data, users:data.Users, notes:data.Notes})
         })
         .catch(err=> {
