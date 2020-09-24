@@ -1,4 +1,5 @@
 const { User, Board } = require('../models')
+const bcrypt = require('bcryptjs');
 
 class UserController {
     // langsung menuju register juga
@@ -12,10 +13,12 @@ class UserController {
     }
 
     static registerUserC (req, res) {
+        let salt = bcrypt.genSaltSync(5)
+        let pwHash = bcrypt.hashSync(req.body.pw, salt)
         User.create({
             uname: req.body.uname,
             email: req.body.email,
-            pw: req.body.pw
+            pw: pwHash
         }).then((data) => {
                 res.redirect ('login')
         }).catch((err) => {
@@ -40,8 +43,8 @@ class UserController {
         // res.send ()
         User.findOne ({
             where: {
-                uname: req.body.uname,
-                pw: req.body.pw
+                uname: req.body.uname
+                // pw: req.body.pw (diganti ke bcript)
             }
         }).then((result) => {
             // res.send(result)
@@ -49,10 +52,19 @@ class UserController {
             if (result == null) {
                 res.redirect (`login?err=true`)
             } else {
-                req.session.isLoggedIn = true
-                req.session.username = result.uname
-                // res.redirect (`/users/${result.uname}`)
-                res.redirect (`/`)
+                bcrypt.compare(req.body.pw, result.pw)
+                    .then((check) => {
+                        if (check === true) {
+                            req.session.isLoggedIn = true
+                            req.session.username = result.uname
+                            // res.redirect (`/users/${result.uname}`)
+                            res.redirect (`/`)
+                        } else {
+                            res.redirect (`login?err=true`)
+                        }
+                    }).catch ((err) => {
+                        res.send('error :' + err)
+                    })
             }
         }).catch((err) => {
             res.send('error :' + err)

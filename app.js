@@ -1,7 +1,8 @@
 const   express = require('express'),
         app     = express(),
+        session = require ('express-session'),
+        bcrypt  = require ('bcryptjs'),
         PORT    = 3000
-const session   = require ('express-session')
 
 // body parser
 app.use(express.urlencoded({ extended: false }))
