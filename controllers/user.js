@@ -13,12 +13,10 @@ class UserController {
     }
 
     static registerUserC (req, res) {
-        let salt = bcrypt.genSaltSync(5)
-        let pwHash = bcrypt.hashSync(req.body.pw, salt)
         User.create({
             uname: req.body.uname,
             email: req.body.email,
-            pw: pwHash
+            pw: req.body.pw
         }).then((data) => {
                 res.redirect ('login')
         }).catch((err) => {
@@ -44,11 +42,8 @@ class UserController {
         User.findOne ({
             where: {
                 uname: req.body.uname
-                // pw: req.body.pw (diganti ke bcript)
             }
         }).then((result) => {
-            // res.send(result)
-            // console.log (result)
             if (result == null) {
                 res.redirect (`login?err=true`)
             } else {
@@ -122,7 +117,7 @@ class UserController {
             // res.send(result)
             res.redirect(`/users/${req.body.uname}`)
         }).catch((err) => {
-            res.send("error :" +     err)
+            res.send("error :" + err)
         })
     }
 
