@@ -9,5 +9,10 @@
     <img src="<%= note.cover_img %>" alt="note-cover">
 
     <p><%=note.note%></p>
+    <p><i><b>Written at:</b> <%=prop.created%> <b>Lastly modified at:</b> <%=prop.updated%></i></p>
+    <p><i><%=prop.stat%></i></p>
+
+    <br>
+    <button><a href="boards/<%=note.BoardId%>/<%=note.id%>/edit">Edit</a></button>
 </body>
 </html>
