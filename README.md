@@ -12,45 +12,47 @@
 - [x] Relasi n:1 (One to Many) Table Boards:Notes
     - [x] Database
     - [x] Model
-- [ ] CRUD
+- [x] CRUD
     - [x] User      -> Bagus
       - [x] Register (add)
       - [x] Login (read)
     - [x] Board     -> Hakim
     - [ ] Note
-- [ ] EJS
+- [x] EJS
     - [x] Home
     - [x] Dasboard (user id -> session)
     - [x] Board
-    - [ ] Notes
-- [ ] Router Get
+    - [x] Notes
+- [x] Router Get
     - [x] Home (login/register)
-    - [ ] Users
+    - [x] Users
       - [x] Register / main page
       - [x] login
       - [x] Dashboard
     - [x] Board
       - [x] Add Board
-    - [ ] Note
-      - [ ] Edit Notes (or 1st edit / add)
+    - [x] Note
+      - [x] Edit Notes (or 1st edit / add)
     <!-- - [ ] User Page (list all connected Boards)
       - [ ] Board (list all connected notes)
         - [ ] Notes (edit the notes) -->
-- [ ] Router Post
+- [x] Router Post
     - [x] Users
       - [x] Login
       - [x] Register
     - [x] Board
       - [x] Add Board
       - [x] Modify / Edit Board
-    - [ ] Note
-      - [ ] Add Notes
-      - [ ] Edit Notes (edit the notes)
+    - [x] Note
+      - [x] Add Notes
+      - [x] Edit Notes (edit the notes)
+
+
 - [ ] Method
     - [ ] Static Method (   ?)
     - [ ] Instance Method (  ?)
-- [ ] Hooks (  afterFind -> Pw: null ?)
-- [ ] Helper (   ?)
+- [ ] Hooks (  pw hashing )
+- [ ] Helper (  paragraf view note di board )
 - [ ] Middleware (    ?)
 - [x] Session Register / Login
 - [ ] MVP google translate
