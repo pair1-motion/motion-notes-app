@@ -13,6 +13,16 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Note.belongsTo(models.Board)
     }
+
+    static convertDate (date) {
+      return date.toDateString()
+    }
+
+    static noteStats(note) {
+      let wordCount = note.split(' ').length
+      let charCount = note.length
+      return `Note Statistics: ${wordCount} words, ${charCount} characters`
+    }
   };
   Note.init({
     note: DataTypes.STRING,

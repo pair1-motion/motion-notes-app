@@ -168,7 +168,13 @@ class BoardController {
             })
             .then(data => {
                 // res.send(data)
-                res.render('./notes/viewNote', { note: data })
+                let noteProperties = {
+                    stat: Note.noteStats(data.note),
+                    created: Note.convertDate(data.createdAt),
+                    updated: Note.convertDate(data.updatedAt)
+                }
+                // res.send(noteProperties)
+                res.render('./notes/viewNote', { note: data, prop: noteProperties })
             })
             .catch(err => {
                 res.send(err)
