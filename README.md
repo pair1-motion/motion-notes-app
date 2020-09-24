@@ -17,7 +17,7 @@
       - [x] Register (add)
       - [x] Login (read)
     - [x] Board     -> Hakim
-    - [ ] Note
+    - [x] Note
 - [x] EJS
     - [x] Home
     - [x] Dasboard (user id -> session)
@@ -33,9 +33,6 @@
       - [x] Add Board
     - [x] Note
       - [x] Edit Notes (or 1st edit / add)
-    <!-- - [ ] User Page (list all connected Boards)
-      - [ ] Board (list all connected notes)
-        - [ ] Notes (edit the notes) -->
 - [x] Router Post
     - [x] Users
       - [x] Login
@@ -49,10 +46,10 @@
 
 
 - [ ] Method
-    - [ ] Static Method (   ?)
-    - [ ] Instance Method (  ?)
-- [ ] Hooks (  pw hashing )
-- [ ] Helper (  paragraf view note di board )
-- [ ] Middleware (    ?)
+    - [ ] Static Method ( wordcounter -> note )
+    - [x] Instance Method ( get date created of note)
+- [x] Hooks (  pw hashing )
+- [x] Helper (  paragraf view note di board )
+- [x] Middleware ( check login agar redirect '/' )
 - [x] Session Register / Login
 - [ ] MVP google translate

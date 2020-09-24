@@ -23,6 +23,12 @@ module.exports = (sequelize, DataTypes) => {
       let charCount = note.length
       return `Note Statistics: ${wordCount} words, ${charCount} characters`
     }
+
+    getCreatedDate () {
+      let tanggal = (this.dataValues.createdAt).toISOString().split("T")
+      return `Tanggal: ${tanggal[0]} at ${tanggal[1]}`
+    }
+
   };
   Note.init({
     note: DataTypes.STRING,

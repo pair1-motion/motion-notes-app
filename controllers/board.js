@@ -174,7 +174,7 @@ class BoardController {
                     updated: Note.convertDate(data.updatedAt)
                 }
                 // res.send(noteProperties)
-                res.render('./notes/viewNote', { note: data, prop: noteProperties })
+                res.render('./notes/viewNote', { note: data, prop: noteProperties, date:data.getCreatedDate() })
             })
             .catch(err => {
                 res.send(err)
