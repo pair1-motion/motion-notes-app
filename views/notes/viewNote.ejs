@@ -15,11 +15,16 @@
         <img src="<%= note.cover_img %>" alt="note-cover" class="img-fluid" alt="Responsive image">
 
         <h1>Note:</h1>
-
+        <div>
+          <a href="?lang=en">See in english</a>
+          <a href="?lang=zh-cn">See in chinese</a>
+        </div>
         <blockquote class="blockquote">
-            <p class="mb-0"><%=note.note%></p>
-            <footer class="blockquote-footer"><i><b>Written at:</b> <%=prop.created%> <b>Lastly modified at:</b> <%=prop.updated%></i></footer>
 
+            <p class="mb-0"><%= afterTranslate ? afterTranslate : note.note %></p>
+            
+            <footer class="blockquote-footer"><i><b>Written at:</b> <%=prop.created%> <b>Lastly modified at:</b> <%=prop.updated%></i>
+            </footer>
         </blockquote>
         <p><i><%=prop.stat%></i></p>
 

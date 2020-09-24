@@ -1,0 +1,1 @@
+const translte = require('translte');

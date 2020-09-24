@@ -1,5 +1,6 @@
 const { Board, UserBoard, User, Note} = require("../models/index")
 const Helper = require("../helpers/helper")
+const translate = require('translate-google')
 
 
 class BoardController {
@@ -159,7 +160,7 @@ class BoardController {
 
 
     static viewNote(req, res) {
-        let boardId = +req.params.boardId
+        let afterTranslate = false
         let noteId = +req.params.noteId
         Note.findOne({
             where: {
@@ -174,10 +175,39 @@ class BoardController {
                     updated: Note.convertDate(data.updatedAt)
                 }
                 // res.send(noteProperties)
-                res.render('./notes/viewNote', { note: data, prop: noteProperties, date:data.getCreatedDate() })
+                res.render('./notes/viewNote', {afterTranslate, note: data, prop: noteProperties, date:data.getCreatedDate() })
             })
             .catch(err => {
                 res.send(err)
+            })
+    }
+
+    static viewNoteInLang (req, res) {
+        let dataNote
+        let lang = req.query.lang
+        let noteId = +req.params.noteId
+        let noteProperties
+        Note.findOne({
+            where: {
+                id: noteId
+            }
+            })
+            .then(data => {
+                dataNote = data
+                // res.send(data)
+                noteProperties = {
+                    stat: Note.noteStats(data.note),
+                    created: Note.convertDate(data.createdAt),
+                    updated: Note.convertDate(data.updatedAt)
+                }
+                // res.send(noteProperties)
+                return translate(data.note, {from: 'id', to: lang})
+            }).then ((afterTranslate) => {
+                console.log (afterTranslate)
+                res.render('./notes/viewNote', {afterTranslate, note: dataNote, prop: noteProperties })
+            })
+            .catch(err => {
+                res.send("err11 :" + err)
             })
     }
 
