@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <%- include ('./css/index.ejs') %>
+    <%- include ('./css.ejs') %>
+
 </head>
 <body>
-    <%- include ('./partials/nav') %> 
-    <h1>Welcome To Motion</h1>
+    <div class="container">
+        <%- include ('./partials/nav') %> 
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome To Motion</h1>
+            <p class="lead">Save your idea in notes</p>
+            <hr class="my-4">
+            <p>Get started to write...</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="/users" role="button">SignUp</a>
+            </p>
+          </div>
+    </div>
 </body>
 </html>

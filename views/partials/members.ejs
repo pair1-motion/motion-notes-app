@@ -1,8 +1,8 @@
 <div>
-    <p>All members:</p>
-    <ul>
+    <p class="lead">All members that using this app:</p>
+    <ul class="list-group list-group-flush">
         <% dataMember.forEach (e => { %>
-            <li><%= e.uname %> </li>
+            <li class="list-group-item"><%= e.uname %>#<%= e.id %> </li>
         <% }) %>
     </ul>
 </div>
