@@ -9,6 +9,21 @@ app.use(express.urlencoded({ extended: false }))
 // setting untuk menggunakan ejs
 app.set('view engine', 'ejs')
 
+function authChecker(req, res, next) {
+    if (
+        req.session.isLoggedIn ||
+        req.path === '/' ||
+        req.path === '/users/login' ||
+        req.path === '/users'
+    ) {
+        // console.log ('masuk')
+        next();
+    } else {
+        res.redirect("/")
+    }
+}
+
+
 // inisialisasi session
 app.use(session({
     // kunci session
@@ -20,8 +35,12 @@ app.use(session({
     }
 }))
 
+//middleware
+app.use (authChecker)
+
 // menggunakan router di index folder routers
 app.use('/', require('./routers'))
+
 
 // menjalankan sesuai PORT
 app.listen(PORT, () => {
