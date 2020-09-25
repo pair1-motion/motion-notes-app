@@ -2,7 +2,7 @@ const   express = require('express'),
         app     = express(),
         session = require ('express-session'),
         bcrypt  = require ('bcryptjs'),
-        PORT    = 3000
+        PORT    = process.env.PORT || 3000
 
 // body parser
 app.use(express.urlencoded({ extended: false }))

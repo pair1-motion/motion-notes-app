@@ -71,12 +71,12 @@ class BoardController {
     }
 
     static addAuthorC (req, res) {
-        // console.log (req.params)
+        console.log (req.params)
         UserBoard.create({
             UserId: req.body.UserId,
             BoardId: req.params.idBoard
         }).then((result) => {
-            res.redirect (`/boards/viewBoard/${req.params.id}`)
+            res.redirect (`/boards/${req.params.idBoard}`)
         }).catch((err) => {
             res.send("err" + err)
         });

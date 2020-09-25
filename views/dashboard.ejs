@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+        <%- include ('./partials/nav-login.ejs') %> 
         <div class="jumbotron">
             <h1>Welcome <%= uname %> </h1><br>
             <a href="/users/setting/<%= uname %>" class="btn btn-primary">Setting</a>
