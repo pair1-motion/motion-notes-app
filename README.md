@@ -43,13 +43,11 @@
     - [x] Note
       - [x] Add Notes
       - [x] Edit Notes (edit the notes)
-
-
-- [ ] Method
-    - [ ] Static Method ( wordcounter -> note )
+- [x] Method
+    - [x] Static Method ( wordcounter -> note )
     - [x] Instance Method ( get date created of note)
 - [x] Hooks (  pw hashing )
 - [x] Helper (  paragraf view note di board )
 - [x] Middleware ( check login agar redirect '/' )
 - [x] Session Register / Login
-- [ ] MVP google translate
+- [x] MVP google translate

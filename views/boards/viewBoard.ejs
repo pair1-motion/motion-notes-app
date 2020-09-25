@@ -40,13 +40,13 @@
         <div class="card-body">
           <p class="card-text"><%= notes[i].note %></p>
           <a href="/boards/<%=board.id%>/<%=notes[i].id%>" class="btn btn-primary">View Note</a>
+          <a href="/boards/<%=board.id%>/<%=notes[i].id%>delete" class="btn btn-danger">Delete Note</a>
         </div>
     </div>
     <% } %>
 
     <br>
     <a href="/boards/<%=board.id%>/notes/add" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Create a new note</a>
-
     </div>
 
   </body>
