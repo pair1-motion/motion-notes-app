@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <h3>Contributor:</h3>
+    <ul>
+        
+    </ul>
+    <% boards.forEach(element => { %>
+        <h2><%= element.name %></h2>
+        <p><%= element.description %></p>  <br>
+        <button><a href="/boards/<%= element.id %>">View Board</a></button>
+        <button><a href="/boards/<%= element.id %>/edit">Edit</a></button>
+        <button><a href="/boards/<%= element.id %>/delete">Delete</a></button>
+        <br>
+    <% }) %>
+
+    <br>
+    <button><a href="/boards/add">Create another Board</a></button>
+
+</body>
+</html>
