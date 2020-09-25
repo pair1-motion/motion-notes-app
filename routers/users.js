@@ -13,8 +13,6 @@ router.get ('/login', (req, res) => {
     }
 })
 
-// homenya user ini setelah login
-router.get ('/:uname', UserController.dashboardC)
 
 router.get ('/setting/:uname', UserController.settingC)
 router.get ('/delete/:uname', UserController.deleteUserC)
@@ -24,6 +22,8 @@ router.post ('/login', UserController.loginPostC)
 router.post ('/register', UserController.registerUserC)
 router.post ('/update/:uname', UserController.updateUserC)
 
+// homenya user ini setelah login
+router.get ('/:uname', UserController.dashboardC)
 // ! Board
 
 

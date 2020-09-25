@@ -13,6 +13,7 @@ class UserController {
     }
 
     static registerUserC (req, res) {
+        console.log (req.body)
         User.create({
             uname: req.body.uname,
             email: req.body.email,

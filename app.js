@@ -14,7 +14,8 @@ function authChecker(req, res, next) {
         req.session.isLoggedIn ||
         req.path === '/' ||
         req.path === '/users/login' ||
-        req.path === '/users'
+        req.path === '/users' ||
+        req.path === '/users/register'
     ) {
         // console.log ('masuk')
         next();
