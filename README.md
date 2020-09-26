@@ -1,6 +1,79 @@
 # motion-notes-app
 ---
 
+CRUD App using express, postgres, sequelize, and ejs as view engine
+
+[try app](https://motion-notes.herokuapp.com/)
+
+Tree Project Strucutre:
+```bash
+.  
+├── app.js  
+├── config  
+│ └── config.json  
+├── controllers  
+│ ├── board.js  
+│ ├── index.js  
+│ └── user.js  
+├── dataseed  
+│ └── boards.json  
+├── helpers  
+│ └── helper.js  
+├── migrations  
+│ ├── 20200923095846-create-user.js  
+│ ├── 20200923100240-create-board.js  
+│ ├── 20200923100446-create-user-board.js  
+│ ├── 20200923100718-create-note.js  
+│ ├── 20200923114621-add-constrain-in-usersboards.js  
+│ └── 20200923124752-add-constrain-in-notes.js  
+├── models  
+│ ├── board.js  
+│ ├── index.js  
+│ ├── note.js  
+│ ├── userboard.js  
+│ └── user.js  
+├── package.json  
+├── package-lock.json  
+├── Procfile  
+├── README.md  
+├── routers  
+│ ├── boardRouter.js  
+│ ├── index.js  
+│ └── users.js  
+├── sb.js  
+├── seeders  
+│ └── 20200923142135-seed-board.js  
+└── views  
+├── boards  
+│ ├── board-edit.ejs  
+│ ├── board-form.ejs  
+│ ├── boards2.ejs  
+│ ├── boards.ejs  
+│ └── viewBoard.ejs  
+├── css  
+│ ├── index.ejs  
+│ └── login.ejs  
+├── css.ejs  
+├── dashboard.ejs  
+├── index.ejs  
+├── login.ejs  
+├── notes  
+│ ├── note-edit.ejs  
+│ ├── note-form.ejs  
+│ └── viewNote.ejs  
+├── partials  
+│ ├── members.ejs  
+│ ├── nav.ejs  
+│ └── nav-login.ejs  
+├── register.ejs  
+└── setting.ejs
+```
+
+
+
+
+
+<!---
 ## Development - nb:
         Tambahkan Catatan disini:
 - [x] Init DB
@@ -51,3 +124,4 @@
 - [x] Middleware ( check login agar redirect '/' )
 - [x] Session Register / Login
 - [x] MVP google translate
+-->
